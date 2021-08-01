@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
+import Home from "./screens/Home/Home";
+import AboutScreen from "./screens/About/AboutScreen";
+import ContactScreen from './screens/Contact/ContactScreen';
+import ProductsScreen from "./screens/Products/ProductsScreen";
+import LocalizationScreen from './screens/Localization/LocalizationScreen';
+import { AppContainer } from "./styles";
+import { Switch, Route } from 'react-router-dom';
 
-function App() {
+const App = () => {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <AppContainer>
+        <Navbar />
+        <Switch>
+          <Route path='/' exact>
+              <Home />
+          </Route>
+          <Route path='/about'>
+              <AboutScreen />
+          </Route>
+          <Route path='/contact'>
+              <ContactScreen />
+          </Route>
+          <Route path='/products'>
+              <ProductsScreen />
+          </Route>
+          <Route path='/localization'>
+              <LocalizationScreen />
+          </Route>
+        </Switch>
+        <Footer />
+      </AppContainer>
+      
+     
+    
   );
 }
 
