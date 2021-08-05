@@ -1,7 +1,9 @@
 import { HighLightContainer,
-        TestImage } from "./styles";
+        LogoImage } from "./styles";
 import Carousel from "react-material-ui-carousel";
 import Item from "./Item";
+import LogoMarca from '../../assets/logomarcapng4.png';
+
 
 const HighLight = ({ ItemCarousel }) => {
     
@@ -14,7 +16,8 @@ const HighLight = ({ ItemCarousel }) => {
                 {ItemCarousel?.map(item => {
                     return <Item item={item} key={item.id} />
                 })}
-            </Carousel>                
+            </Carousel>
+            <LogoImage src={LogoMarca} />                
         </HighLightContainer>
     )
 }

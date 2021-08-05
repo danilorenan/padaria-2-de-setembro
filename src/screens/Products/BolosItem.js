@@ -17,8 +17,12 @@ const BolosItem = ({ item }) => {
                 <BolosImageCard src={item.image} />
                 <BolosInfosContainer>
                     <BolosNameCard>{item.name}</BolosNameCard>
-                    <BolosAboutCard>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  </BolosAboutCard>
-                    <BolosCodCard>Cód: {item.cod}</BolosCodCard>
+                    {item.ing? (
+                        <BolosAboutCard><h3>Ingredientes:</h3> { item.ing } </BolosAboutCard>
+                    ):(
+                    <BolosAboutCard>Não informado</BolosAboutCard>
+                    )}
+                    <BolosCodCard className='bolos-cod'>Cód: {item.cod}</BolosCodCard>
                     <Link style={{textDecoration: 'none'}} to='/contact'>
                         <BolosMoreButton className='Bolos-button'>Mais...</BolosMoreButton>
                     </Link>

@@ -1,9 +1,9 @@
 import React from 'react'
 import { ItemContainer,
         ContainerDescription,
-        ItemDescription } from './styles';
+        ItemDescription, 
+        LogoImage} from './styles';
 import { Paper } from '@material-ui/core';
-
 const Item = ({ item }) => {
     return (
         <ItemContainer>
@@ -12,8 +12,11 @@ const Item = ({ item }) => {
                     <div className='text-description'>
                         {item.description}
                     </div>
+                    
                 </ItemDescription>
             </ContainerDescription>
+            
+        
             <Paper className='paper'>
                 <img src={item.image} />
             </Paper>

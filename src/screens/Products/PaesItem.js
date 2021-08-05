@@ -17,8 +17,12 @@ const PaesItem = ({ item }) => {
                 <PaesImageCard src={item.image} />
                 <PaesInfosContainer>
                     <PaesNameCard>{item.name}</PaesNameCard>
-                    <PaesAboutCard>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  </PaesAboutCard>
-                    <PaesCodCard>Cód: {item.cod}</PaesCodCard>
+                    {item.ing? (
+                    <PaesAboutCard><h3>Ingredientes:</h3>{item.ing} </PaesAboutCard>  
+
+                    ):(<PaesAboutCard>Não informado</PaesAboutCard>)
+                        }
+                    <PaesCodCard className='paes-cod'>Cód: {item.cod}</PaesCodCard>
                     <Link style={{textDecoration: 'none'}} to='/contact'>
                         <PaesMoreButton className='paes-button'>Mais...</PaesMoreButton>
                     </Link>

@@ -46,6 +46,9 @@ export const PaesItemContainer = styled.div`
         .paes-button{
             display: block;
         }
+        .paes-cod {
+            display: block;
+        }
     }
     
 `
@@ -82,10 +85,16 @@ export const PaesAboutCard = styled.span`
     color: #fff;
     text-align: center;
     font-size: 0.8rem;
+    padding: 0 1rem 0 1rem;
+
+    h3 {
+        font-size: 0.8rem;
+    }
 `
 export const PaesCodCard = styled.h3`
     color: #fff;
     font-size: 0.8rem;
+    display: none;
 `
 export const PaesMoreButton = styled.div`
     cursor: pointer;
@@ -138,6 +147,9 @@ export const BolosItemContainer = styled.div`
         .Bolos-button{
             display: block;
         }
+        .bolos-cod{
+            display: block;
+        }
     }
     
 `
@@ -174,10 +186,15 @@ export const BolosAboutCard = styled.span`
     color: #fff;
     text-align: center;
     font-size: 0.8rem;
+    padding: 0 1rem 0 1rem;
+    h3 {
+        font-size: 0.8rem;
+    }
 `
 export const BolosCodCard = styled.h3`
     color: #fff;
     font-size: 0.8rem;
+    display: none;
 `
 export const BolosMoreButton = styled.div`
     cursor: pointer;
@@ -230,6 +247,9 @@ export const CucasItemContainer = styled.div`
         .Cucas-button{
             display: block;
         }
+        .cucas-cod{
+            display: block;
+        }
     }
     
 `
@@ -266,10 +286,15 @@ export const CucasAboutCard = styled.span`
     color: #fff;
     text-align: center;
     font-size: 0.8rem;
+    padding: 0 1rem 0 1rem;
+    h3 {
+        font-size: 0.8rem;
+    }
 `
 export const CucasCodCard = styled.h3`
     color: #fff;
     font-size: 0.8rem;
+    display: none;
 `
 export const CucasMoreButton = styled.div`
     cursor: pointer;

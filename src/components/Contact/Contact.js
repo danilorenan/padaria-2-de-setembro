@@ -11,8 +11,18 @@ import { ContainerContact,
         TextEmail, 
         TextPhone, 
         TitleContact } from './styles';
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
+
+    const sendEmail = (e) => {
+        emailjs.sendForm('service_pny4orl', 'template_pza0poj', e.target, 'YOUR_USER_ID')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+    }
 
     return (
         <ContainerContact>
@@ -27,7 +37,7 @@ const Contact = () => {
                         <span>CEP 89052-030 | Blumenau - SC</span>
                     </ContainerInformations> 
                 </ContainerPhoneContact>
-                <ContainerEmailContact>
+                <ContainerEmailContact onSubmit={sendEmail}>
                     <NameTextField 
                         required id="standard-basic" 
                         label="Digite seu Nome"
@@ -51,7 +61,7 @@ const Contact = () => {
                         fullWidth
                         variant='filled'>
                     </MessageTextField>
-                    <SendMessage>Enviar</SendMessage>
+                    <SendMessage onClick={sendEmail}>Enviar</SendMessage>
                 </ContainerEmailContact>
             </ContainerFormContact>
         </ContainerContact>

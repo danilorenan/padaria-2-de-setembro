@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const HighLightContainer = styled.div`
     display: flex;
-    
+    position: relative;
     @media(max-width: 425px){
         
     }
@@ -13,7 +13,6 @@ export const ItemContainer = styled.div`
     width: 100%;
     display: flex;
     margin-inline: auto;
-    width: auto;
     @media(max-width: 641px){
         height: 20rem;
     }
@@ -43,7 +42,7 @@ export const ItemContainer = styled.div`
             min-height: 20rem;
         }
     }
-
+   
 `
 export const ContainerDescription = styled.div`
     display: flex;
@@ -61,6 +60,7 @@ export const ItemDescription = styled.div`
     justify-content: start;
     align-items: center;
     padding: 1rem;
+    flex-direction: column;
 
     @media(max-width: 505px){
         width: 100%;
@@ -76,7 +76,7 @@ export const ItemDescription = styled.div`
         display: flex;
 
         @media(max-width: 768px){
-            font-size: 2rem;
+            font-size: 1.5rem;
             line-height: 2.5rem;
         }
 
@@ -85,5 +85,21 @@ export const ItemDescription = styled.div`
             font-size: 1.5rem;
             
     }
+    }
+    
+`
+export const LogoImage = styled.img`
+    min-width: 15%;
+    height: 30%;
+    position: absolute;
+    z-index: 999;
+    align-self: flex-end;
+    background-color: rgba(1,1,1, 0.2);
+    margin: 1rem;
+    filter: saturate(260%) opacity(52%) contrast(120%) drop-shadow(0px 10px 400px #000000);
+-webkit-filter: saturate(260%) opacity(52%) contrast(120%) drop-shadow(0px 10px 400px #000000);
+-moz-filter: saturate(260%) opacity(52%) contrast(120%) drop-shadow(0px 10px 400px #000000);
+    @media(max-width: 320px){
+            display: none;
     }
 `

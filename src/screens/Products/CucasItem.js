@@ -17,8 +17,12 @@ const CucasItem = ({ item }) => {
                 <CucasImageCard src={item.image} />
                 <CucasInfosContainer>
                     <CucasNameCard>{item.name}</CucasNameCard>
-                    <CucasAboutCard>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  </CucasAboutCard>
-                    <CucasCodCard>Cód: {item.cod}</CucasCodCard>
+                    {item.ing? (
+                        <CucasAboutCard><h3>Ingredientes:</h3> {item.ing} </CucasAboutCard>
+                    ):(
+                    <CucasAboutCard>Não informado</CucasAboutCard>
+                    )}
+                    <CucasCodCard className='cucas-cod'>Cód: {item.cod}</CucasCodCard>
                     <Link style={{textDecoration: 'none'}} to='/contact'>
                         <CucasMoreButton className='Cucas-button'>Mais...</CucasMoreButton>
                     </Link>
