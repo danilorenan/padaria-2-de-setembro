@@ -30,7 +30,12 @@ const Navbar = () => {
             </Link>                
                 <MenuContainer 
                 className={sidebar? 'sidebar open' : 'sidebar'}
-                onClick={() => handleToggleSidebar(false)}>
+                onClick={() => handleToggleSidebar(true)}>
+                        <Link to='/' style={{textDecoration:'none', color: '#fff'}}>
+                            <li>
+                                Home
+                            </li>
+                        </Link>
                         <Link to='/products' style={{textDecoration:'none', color: '#fff'}}>
                             <li>
                                 Produtos

@@ -15,7 +15,7 @@ export const ContactScreenContainer = styled.div`
 
 export const MapsContainer = styled.div`
     width: 100%;
-    height: 80vh;
+    height: 30rem;
     background-color: #272622;
     display: flex;
     flex-direction: column;
@@ -24,7 +24,7 @@ export const MapsContainer = styled.div`
 
     .map-style {
         width: 50rem;
-        height: 55vh;
+        height: 20rem;
 
         @media(max-width: 806px){
         width: 45rem;

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { ContainerContact, 
         ContainerEmailContact, 
         ContainerFormContact, 
@@ -15,12 +15,24 @@ import emailjs from 'emailjs-com';
 
 const Contact = () => {
 
+    const [emailInput, setEmailInput] = useState('');
+    const [nameInput, setNameInput] = useState('');
+    const [messageInput, setMessageInput] = useState('');
+
     const sendEmail = (e) => {
-        emailjs.sendForm('service_pny4orl', 'template_pza0poj', e.target, 'YOUR_USER_ID')
+        e.preventDefault();
+        emailjs.send('service_pny4orl', 'template_pza0poj', {
+            name: nameInput,
+            email: emailInput,
+            message: messageInput
+        }, 'user_cf8SiJrCNBLehEwH5sihB')
       .then((result) => {
-          console.log(result.text);
+          alert('Mensagem enviada com sucesso')
+          setMessageInput('')
+          setNameInput('')
+          setEmailInput('')
       }, (error) => {
-          console.log(error.text);
+          alert(error.message);
       });
     }
 
@@ -38,30 +50,39 @@ const Contact = () => {
                     </ContainerInformations> 
                 </ContainerPhoneContact>
                 <ContainerEmailContact onSubmit={sendEmail}>
-                    <NameTextField 
+                    <NameTextField
+                        name="name" 
                         required id="standard-basic" 
                         label="Digite seu Nome"
                         margin='dense'
                         fullWidth
                         variant='filled'
+                        value={nameInput}
+                        onChange={e => setNameInput(e.target.value)}
                         >
                     </NameTextField>
-                    <EmailTextField 
+                    <EmailTextField
+                        name="email" 
                         required id="standard-basic" 
                         label="Digite seu Email"
                         margin='none'
                         fullWidth
-                        variant='filled'>
+                        variant='filled'
+                        value={emailInput}
+                        onChange={e => setEmailInput(e.target.value)}>
                     </EmailTextField>
-                    <MessageTextField 
+                    <MessageTextField
+                        name="message" 
                         id="outlined-multiline-static" 
                         multiline rows={4} 
                         label='Mensagem'
                         margin='normal'
                         fullWidth
-                        variant='filled'>
+                        variant='filled'
+                        value={messageInput}
+                        onChange={e => setMessageInput(e.target.value)}>
                     </MessageTextField>
-                    <SendMessage onClick={sendEmail}>Enviar</SendMessage>
+                    <SendMessage value='Enviar' type='submit' />
                 </ContainerEmailContact>
             </ContainerFormContact>
         </ContainerContact>

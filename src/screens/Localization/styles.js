@@ -16,6 +16,11 @@ export const MapContainer = styled.div`
         justify-content: center;
         align-items: center;
         background-color: #564929;
+        flex-direction: column;
+
+        .cities-text {
+            padding: 1rem;
+        }
     }
 `
 export const TitleMap = styled.h1`
@@ -44,4 +49,7 @@ export const Map = styled.img`
     @media(max-width: 476px){
         width: 20rem;
     }
+`
+export const CitiesText = styled.span`
+
 `

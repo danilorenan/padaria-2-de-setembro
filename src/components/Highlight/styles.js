@@ -78,6 +78,7 @@ export const ItemDescription = styled.div`
         @media(max-width: 768px){
             font-size: 1.5rem;
             line-height: 2.5rem;
+            display: none;
         }
 
         @media(max-width: 505px){
@@ -97,8 +98,8 @@ export const LogoImage = styled.img`
     background-color: rgba(1,1,1, 0.2);
     margin: 1rem;
     filter: saturate(260%) opacity(52%) contrast(120%) drop-shadow(0px 10px 400px #000000);
--webkit-filter: saturate(260%) opacity(52%) contrast(120%) drop-shadow(0px 10px 400px #000000);
--moz-filter: saturate(260%) opacity(52%) contrast(120%) drop-shadow(0px 10px 400px #000000);
+    -webkit-filter: saturate(260%) opacity(52%) contrast(120%) drop-shadow(0px 10px 400px #000000);
+    -moz-filter: saturate(260%) opacity(52%) contrast(120%) drop-shadow(0px 10px 400px #000000);
     @media(max-width: 320px){
             display: none;
     }

@@ -4,24 +4,27 @@ import styled from "styled-components";
 export const ContainerDestaque = styled.div`
     background-color: #564929;
     width: 100%;
-    height: 90vh;
+    height: 40rem;
     padding: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
     @media (max-width: 768px){
-        height: 100vh;
         padding: 0.5rem;
     }
 
     @media (max-width: 550px){
-        height: 100vh;
         padding: 0.5rem;
     }
 
     @media (max-width: 425px){
         height: 100vh;
         padding: 0.5rem;
+    }
+
+    @media(max-height: 502px){
+        height: 35rem;
     }
 `
 export const TitleDestaque = styled.h1`
@@ -42,18 +45,18 @@ export const TitleDestaque = styled.h1`
 `
 export const ContainerItemDestaque = styled.div`
     width: 70vw;
-    height: 70vh;
+    height: 30rem;
     background-color: #272622;
     display: flex;
 
     @media (max-width: 1024px){
         width:70vw;
-        height: 60vh;
+        
     }
     
     @media (max-width: 768px){
         width:40vw;
-        height: 80vh;
+        
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -64,7 +67,6 @@ export const ContainerItemDestaque = styled.div`
         justify-content: center;
         align-items: center;
         width: 50vw;
-        height: 80vh;
     }
     @media (max-width: 425px){
         flex-direction: column;
@@ -73,7 +75,6 @@ export const ContainerItemDestaque = styled.div`
         align-items: center;
         width: 80vw;
         height: 80vh;
-        overflow: hidden;
     }
     
 `

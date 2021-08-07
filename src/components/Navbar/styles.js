@@ -93,6 +93,12 @@ export const MenuContainer = styled.ul`
     padding: 1rem;
     cursor: pointer;
     overflow: hidden;
+    
+    li{
+        @media(max-width: 632px){
+        font-size: 0.8rem;
+    }
+    }
 
     &.open{
         @media(max-width: 570px){
@@ -122,6 +128,7 @@ export const MenuContainer = styled.ul`
             text-align: center;
             font-size: 1rem;
             margin: 0;
+            
         }
     }
 
@@ -134,8 +141,8 @@ export const MenuContainer = styled.ul`
     .menu-icons {
         display: flex;
         width: 4rem;
-        justify-content: space-between;
         align-items: center;
+        justify-content: center;
     }
 `
 export const WhatsIcon = styled(WhatsAppIcon)`
@@ -146,7 +153,6 @@ export const WhatsIcon = styled(WhatsAppIcon)`
 export const FaceIcon = styled(FacebookIcon)`
     &:hover{
         color: #8a817c;
-        float: right;
     }
 ` 
 export const IconMenu = styled(MenuIcon)`

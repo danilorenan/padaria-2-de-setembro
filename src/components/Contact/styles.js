@@ -3,7 +3,7 @@ import TextField from '@material-ui/core/TextField'
 
 export const ContainerContact = styled.div`
     background-color: #272622;
-    height: 90vh;
+    height: auto;
     width: 100%;
     padding: 2rem;
     display: flex;
@@ -13,6 +13,9 @@ export const ContainerContact = styled.div`
     @media(max-width: 502px){
         height: 100vh;
         padding: 1rem;
+    }
+    @media(max-height: 502px){
+        height: 35rem;
     }
 `
 export const TitleContact = styled.h1`
@@ -35,7 +38,7 @@ export const ContainerFormContact = styled.div`
     width: 60%;
     min-width: 770px;
     inline-size: auto;
-    height: 90%;
+    height: 30rem;
     margin: 2rem;
     border: 1px solid #564929;
     display: flex;
@@ -54,11 +57,10 @@ export const ContainerFormContact = styled.div`
         display: flex;
         flex-direction: column;
         margin: 1rem;
-        height: 90%;
+        
     }
     @media(max-width: 433px){
         width: 10rem;
-        height: 95%;
         margin: 0.5rem;
         display: flex;
         align-items: center;
@@ -156,7 +158,7 @@ export const EmailTextField = styled(TextField)`
 export const MessageTextField = styled(TextField)`
     
 `
-export const SendMessage = styled.div`
+export const SendMessage = styled.input`
     color: #fff;
     margin: 0.2rem;
     background-color: #272622;
