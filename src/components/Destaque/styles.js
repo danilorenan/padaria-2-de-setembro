@@ -22,9 +22,7 @@ export const ContainerDestaque = styled.div`
         padding: 0.5rem;
     }
 
-    @media(max-height: 502px){
-        height: 35rem;
-    }
+    
 `
 export const TitleDestaque = styled.h1`
     font-size: 2rem;
@@ -55,7 +53,7 @@ export const ContainerItemDestaque = styled.div`
     }
     
     @media (max-width: 768px){
-        width:60vw;
+        width:20rem;
         
         flex-direction: column;
         justify-content: center;
@@ -74,7 +72,7 @@ export const ContainerItemDestaque = styled.div`
         justify-content: center;
         align-items: center;
         width: 80vw;
-        height: 80vh;
+        
     }
     
 `
@@ -184,7 +182,6 @@ export const ImageItemDestaque = styled.img`
 
     @media (max-width: 425px){
         height: 50%;
-        width: auto;
         overflow: hidden;
     }
 `
