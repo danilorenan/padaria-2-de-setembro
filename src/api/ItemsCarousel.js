@@ -1,6 +1,6 @@
-import ImageCarousel1 from '../assets/CarouselImages/ImageCarousel1.jpeg';
-import ImageCarousel2 from '../assets/CarouselImages/ImageCarousel2.jpeg';
-import ImageCarousel3 from '../assets/CarouselImages/ImageCarousel3.jpeg';
+import ImageCarousel1 from '../assets/CarouselImages/ImageCarousel1.jpg';
+import ImageCarousel2 from '../assets/CarouselImages/ImageCarousel2.jpg';
+import ImageCarousel3 from '../assets/CarouselImages/ImageCarousel3.jpg';
 
 const ItemsCarousel = [
     {   

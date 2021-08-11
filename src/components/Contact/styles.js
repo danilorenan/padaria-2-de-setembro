@@ -11,7 +11,6 @@ export const ContainerContact = styled.div`
     align-items: center;
 
     @media(max-width: 502px){
-        height: 100vh;
         padding: 1rem;
     }
     @media(max-height: 502px){

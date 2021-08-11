@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ContainerFooter = styled.div`
     background-color: #564929;
-    height: 20vh;
+    height: 8rem;
     display: flex;
     flex-direction: column;
     align-items: center;

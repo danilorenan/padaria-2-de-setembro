@@ -18,7 +18,7 @@ const Item = ({ item }) => {
             
         
             <Paper className='paper'>
-                <img src={item.image} />
+                <img className='image-carousel' src={item.image} />
             </Paper>
         </ItemContainer>
         

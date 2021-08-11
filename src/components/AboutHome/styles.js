@@ -47,8 +47,13 @@ export const TextAbout = styled.span`
 export const MoreAbout = styled.div`
     text-decoration: underline;
     cursor: pointer;
+    .link-style {
+        &:hover{
+            color: black;
+        }
+    }
     &:hover {
-        color: #272622;
+        color: black;
         background-color: #fff;
     }
 `

@@ -4,14 +4,14 @@ import styled from "styled-components";
 export const ContainerDestaque = styled.div`
     background-color: #564929;
     width: 100%;
-    height: 40rem;
+    height: 80rem;
     padding: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: hidden;
     @media (max-width: 768px){
         padding: 0.5rem;
+        height: 70rem;
     }
 
     @media (max-width: 550px){
@@ -19,7 +19,6 @@ export const ContainerDestaque = styled.div`
     }
 
     @media (max-width: 425px){
-        height: 100vh;
         padding: 0.5rem;
     }
 
@@ -48,6 +47,7 @@ export const ContainerItemDestaque = styled.div`
     height: 30rem;
     background-color: #272622;
     display: flex;
+    margin: 1rem;
 
     @media (max-width: 1024px){
         width:70vw;
@@ -55,7 +55,7 @@ export const ContainerItemDestaque = styled.div`
     }
     
     @media (max-width: 768px){
-        width:40vw;
+        width:60vw;
         
         flex-direction: column;
         justify-content: center;
@@ -153,6 +153,13 @@ export const MoreItems = styled.div`
     color: #fff;
     text-align: center;
     cursor: pointer;
+
+    .link-style {
+        &:hover {
+            color: black;
+        }
+    }
+
     &:hover {
         color: #272622;
         background-color: #fff;

@@ -8,8 +8,12 @@ export const ContactScreenContainer = styled.div`
         }
 
     .space {
-        height: 20vh;
+        height: 10rem;
         background-color: #564929;
+
+        @media(max-width: 468px){
+            height: 5rem;
+        }
     }
 `
 
