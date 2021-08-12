@@ -10,6 +10,7 @@ import { BolosCard,
 import { Link } from 'react-router-dom'
 
 const BolosItem = ({ item }) => {
+    const ImageDownload = item.image; 
 
     return (
         <BolosItemContainer>
@@ -23,9 +24,9 @@ const BolosItem = ({ item }) => {
                     <BolosAboutCard>Não informado</BolosAboutCard>
                     )}
                     <BolosCodCard className='bolos-cod'>Cód: {item.cod}</BolosCodCard>
-                    <Link style={{textDecoration: 'none'}} to='/contact'>
-                        <BolosMoreButton className='Bolos-button'>Mais...</BolosMoreButton>
-                    </Link>
+                    <a style={{textDecoration: 'none'}} href={ImageDownload} download={`../../assets/ProductsImages/Bolos/${item.link}`}>
+                        <BolosMoreButton className='Bolos-button'>Download</BolosMoreButton>
+                    </a>
                 </BolosInfosContainer>
             </BolosCard>
         </BolosItemContainer>

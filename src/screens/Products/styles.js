@@ -101,7 +101,7 @@ export const PaesMoreButton = styled.div`
     color: #fff;
     text-align: center;
     border-radius: 4px;
-    width: 4rem;
+    width: 6rem;
     font-size: 1rem;
     padding: 1px;
     background-color: rgb(86, 73, 41);
@@ -201,7 +201,7 @@ export const BolosMoreButton = styled.div`
     color: #fff;
     text-align: center;
     border-radius: 4px;
-    width: 4rem;
+    width: 6rem;
     font-size: 1rem;
     padding: 1px;
     background-color: rgb(86, 73, 41);
@@ -301,7 +301,7 @@ export const CucasMoreButton = styled.div`
     color: #fff;
     text-align: center;
     border-radius: 4px;
-    width: 4rem;
+    width: 6rem;
     font-size: 1rem;
     padding: 1px;
     background-color: rgb(86, 73, 41);

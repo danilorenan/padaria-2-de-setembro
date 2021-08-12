@@ -7,9 +7,9 @@ import { PaesCard,
         PaesAboutCard,
         PaesMoreButton,
         PaesCodCard} from './styles';
-import { Link } from 'react-router-dom';
 
 const PaesItem = ({ item }) => {
+    const ImageDownload = item.image; 
 
     return (
         <PaesItemContainer>
@@ -23,9 +23,9 @@ const PaesItem = ({ item }) => {
                     ):(<PaesAboutCard>Não informado</PaesAboutCard>)
                         }
                     <PaesCodCard className='paes-cod'>Cód: {item.cod}</PaesCodCard>
-                    <Link style={{textDecoration: 'none'}} to='/contact'>
-                        <PaesMoreButton className='paes-button'>Mais...</PaesMoreButton>
-                    </Link>
+                        <a style={{textDecoration: 'none'}} href={ImageDownload} download={`../../assets/ProductsImages/Paes/${item.link}`}>
+                            <PaesMoreButton className='paes-button'>Download</PaesMoreButton>
+                        </a>
                 </PaesInfosContainer>
             </PaesCard>
         </PaesItemContainer>

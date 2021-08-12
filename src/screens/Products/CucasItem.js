@@ -11,6 +11,8 @@ import { Link } from 'react-router-dom';
 
 
 const CucasItem = ({ item }) => {
+    const ImageDownload = item.image; 
+
     return (
         <CucasItemContainer>
             <CucasCard className='Cucas-card'>
@@ -23,9 +25,9 @@ const CucasItem = ({ item }) => {
                     <CucasAboutCard>Não informado</CucasAboutCard>
                     )}
                     <CucasCodCard className='cucas-cod'>Cód: {item.cod}</CucasCodCard>
-                    <Link style={{textDecoration: 'none'}} to='/contact'>
-                        <CucasMoreButton className='Cucas-button'>Mais...</CucasMoreButton>
-                    </Link>
+                    <a style={{textDecoration: 'none'}} href={ImageDownload} download={`../../assets/ProductsImages/Cucas/${item.link}`}>
+                        <CucasMoreButton className='Cucas-button'>Download</CucasMoreButton>
+                    </a>
                 </CucasInfosContainer>
             </CucasCard>
         </CucasItemContainer>
