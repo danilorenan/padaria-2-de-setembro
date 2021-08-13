@@ -24,7 +24,6 @@ export const PaesContainer = styled.div`
     margin: 0 4rem 0 5rem;
     border-bottom: 1px solid rgb(86, 73, 41);
     padding-bottom: 3rem;
-
 `
 export const PaesItemContainer = styled.div`
     display: flex;

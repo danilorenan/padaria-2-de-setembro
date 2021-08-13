@@ -4,7 +4,6 @@ import { NavbarContainer,
         MenuNavbar,
         LogoImage,
         MenuContainer,
-        WhatsIcon,
         FaceIcon, 
         IconMenu,
         LogoImageMenu} from './styles';
