@@ -13,10 +13,15 @@ import { ContainerProducts,
         CucasTitle,
         CucasContainer
          } from './styles';
+import { Helmet } from 'react-helmet';
 
 const ProductsScreen = () => {
     return (
         <ContainerProducts>
+            <Helmet>
+                <title>Padaria 2 de Setembro</title>
+                <meta name="description" content="Padaria 2 de Setembro produtos" />
+            </Helmet>
             <PaesTitle>Pães</PaesTitle>
             <PaesContainer>
                 {PaesItems.map(item => {

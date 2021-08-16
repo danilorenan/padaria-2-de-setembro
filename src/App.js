@@ -7,11 +7,17 @@ import ProductsScreen from "./screens/Products/ProductsScreen";
 import LocalizationScreen from './screens/Localization/LocalizationScreen';
 import { AppContainer } from "./styles";
 import { Switch, Route } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 const App = () => {
   
   return (
       <AppContainer>
+      <Helmet>
+        <title>Padaria 2 de Setembro</title>
+        <meta name="description" content="Padaria 2 de Setembro" />
+      </Helmet>
+
         <Navbar />
         <Switch>
           <Route path='/' exact>

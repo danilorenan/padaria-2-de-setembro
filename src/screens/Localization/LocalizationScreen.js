@@ -7,10 +7,15 @@ import { LocalizationContainer,
         TitleMap,
         CitiesText } from './styles';
 import MapSC from '../../assets/santa-catarina.png';
+import { Helmet } from 'react-helmet';
 
 const LocalizationScreen = () => {
     return (
         <LocalizationContainer>
+            <Helmet>
+                <title>Padaria 2 de Setembro</title>
+                <meta name="description" content="Padaria 2 de Setembro local" />
+            </Helmet>
             <MapContainer>
                 <TitleMap>Nos melhores supermercados de Blumenau e região</TitleMap>
                 <div className='map-background'>

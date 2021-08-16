@@ -2,10 +2,15 @@ import { ContainerAboutHome,
     ContainerInfosAbout,
     TitleAbout,
     TextAbout, } from "./styles";
+import { Helmet } from 'react-helmet';
 
 const About = () => {
 return (
     <ContainerAboutHome>
+        <Helmet>
+        <title>Padaria 2 de Setembro</title>
+        <meta name="description" content="Padaria 2 de Setembro sobre" />
+      </Helmet>
         <ContainerInfosAbout>
             <TitleAbout>
                 Desde 1980
