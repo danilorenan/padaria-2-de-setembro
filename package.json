@@ -47,9 +47,11 @@
   "react-leaflet": ">=3.1.0 <3.2.0 || ^3.2.1",
   "@react-leaflet/core": ">=1.0.0 <1.1.0 || ^1.1.1",
   "devDependencies": {
-    "puppeteerArgs": [
+    "react-snap":  {
+      "puppeteerArgs": [
         "--no-sandbox",
         "--disable-setuid-sandbox"
       ]
+    }
   }
 }
