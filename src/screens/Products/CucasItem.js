@@ -6,7 +6,7 @@ import { CucasCard,
     CucasNameCard,
     CucasAboutCard,
     CucasMoreButton,
-    CucasCodCard} from './styles';
+    CucasCodCard,} from './styles';
 import { Link } from 'react-router-dom';
 
 
@@ -14,7 +14,8 @@ const CucasItem = ({ item }) => {
     const ImageDownload = item.image; 
 
     return (
-        <CucasItemContainer>
+        
+            <CucasItemContainer>
             <CucasCard className='Cucas-card'>
                 <CucasImageCard src={item.image} />
                 <CucasInfosContainer>
@@ -31,6 +32,8 @@ const CucasItem = ({ item }) => {
                 </CucasInfosContainer>
             </CucasCard>
         </CucasItemContainer>
+       
+        
     )
 }
 

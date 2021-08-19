@@ -11,7 +11,8 @@ import { ContainerProducts,
         BolosTitle,
         BolosContainer,
         CucasTitle,
-        CucasContainer
+        CucasContainer,
+        SpaceComponent
          } from './styles';
 import { Helmet } from 'react-helmet';
 
@@ -25,7 +26,8 @@ const ProductsScreen = () => {
             <PaesTitle>Pães</PaesTitle>
             <PaesContainer>
                 {PaesItems.map(item => {
-                    return <PaesItem item={item} key={item.id}/>
+                    return (
+                    <PaesItem item={item} key={item.id}/>)
                 })}
             </PaesContainer>
             <BolosTitle>Bolos</BolosTitle>

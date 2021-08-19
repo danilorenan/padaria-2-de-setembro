@@ -49,18 +49,15 @@ export const ContainerDescription = styled.div`
     width: 100vw;
     z-index: 999;
     background-image: linear-gradient(to right, rgba(15.3, 14.9, 13.3),  rgba(1,0,0,0.0));
-
 `
 export const ItemDescription = styled.div`
-    
+    width: 30rem;
     color: #fff;
-    width: 30%;
-    width: min(30vw, 100vw);
     display: flex;
-    justify-content: start;
     align-items: center;
     padding: 1rem;
     flex-direction: column;
+    margin-left: 0.5rem;
 
     @media(max-width: 505px){
         width: 100%;

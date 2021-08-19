@@ -11,7 +11,7 @@ export const ContainerDestaque = styled.div`
     align-items: center;
     @media (max-width: 768px){
         padding: 0.5rem;
-        height: 70rem;
+        height: 100rem;
     }
 
     @media (max-width: 550px){
@@ -41,20 +41,20 @@ export const TitleDestaque = styled.h1`
     }
 `
 export const ContainerItemDestaque = styled.div`
-    width: 70vw;
+    width: 60rem;
     height: 30rem;
     background-color: #272622;
     display: flex;
     margin: 1rem;
 
     @media (max-width: 1024px){
-        width:70vw;
+        width:50rem;
         
     }
     
     @media (max-width: 768px){
-        width:20rem;
-        
+        width:25rem;
+        height: 50rem;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -64,21 +64,21 @@ export const ContainerItemDestaque = styled.div`
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 50vw;
+        width: 25rem
     }
     @media (max-width: 425px){
         flex-direction: column;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 80vw;
+        width: 20rem;
         
     }
     
 `
 export const ContainerDescriptionItem = styled.div`
     padding: 1rem;
-    width: 50%;
+    width: 30rem;
     background-color: #272622;
     display: flex;
     flex-direction: column;
@@ -89,6 +89,7 @@ export const ContainerDescriptionItem = styled.div`
     @media (max-width: 1024px){
         margin: 1rem;
         justify-content: space-between;
+        width: 25rem;
     }
 
     @media (max-width: 768px){
@@ -164,9 +165,14 @@ export const MoreItems = styled.div`
     }
 `
 export const ImageItemDestaque = styled.img`
-    width: 50%;
+    width: 30rem;
     background-size: cover;
     object-fit: center;
+
+
+    @media (max-width: 1024px){
+        width: 25rem;
+    }
 
     @media (max-width: 768px){
         margin: 0;

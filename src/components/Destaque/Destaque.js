@@ -27,6 +27,7 @@ const Destaque = () => {
                 </ContainerDescriptionItem>
             </ContainerItemDestaque>
             <ContainerItemDestaque>
+                <ImageItemDestaque src={DestaqueImage2} />
                 <ContainerDescriptionItem>
                     <TitleItemDestaque>Cuca de farofa</TitleItemDestaque>
                     <DescriptionItemDestaque>Cuca de farofa caseira, assada no forno a lenha. Para quem quer ter uma vida doce e leve, sem perder os melhores sabores da vida.</DescriptionItemDestaque>
@@ -36,7 +37,6 @@ const Destaque = () => {
                         </MoreItems>
                     </div>
                 </ContainerDescriptionItem>
-                <ImageItemDestaque src={DestaqueImage2} />
             </ContainerItemDestaque>
         </ContainerDestaque>
     )
