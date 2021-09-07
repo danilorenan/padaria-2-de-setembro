@@ -1,7 +1,5 @@
-import React from 'react'
-import { PaesItems } from '../../api/ItemsProducts';
-import { BolosItems } from '../../api/ItemsProducts';
-import { CucasItems } from '../../api/ItemsProducts';
+import React, { useState, useEffect } from 'react'
+
 import PaesItem from './PaesItem';
 import BolosItem from './BolosItem';
 import CucasItem from './CucasItem';
@@ -15,8 +13,25 @@ import { ContainerProducts,
         SpaceComponent
          } from './styles';
 import { Helmet } from 'react-helmet';
+import api from '../../api/api';
 
-const ProductsScreen = () => {
+const ProductsScreen = ({  }) => {
+    const [paes, setPaes] = useState([])
+    const [bolos, setBolos] = useState([])
+    const [cucas, setCucas] = useState([])
+
+    useEffect(() => {
+        async function fetchData() {
+             const res =  await api.get('products');
+             const resBolos = await api.get('bolos');
+             const resCucas = await api.get('cucas');
+             setPaes(res.data)
+             setCucas(resCucas.data)
+             setBolos(resBolos.data)
+         }
+         fetchData()
+         
+     }, [])
     return (
         <ContainerProducts>
             <Helmet>
@@ -25,20 +40,20 @@ const ProductsScreen = () => {
             </Helmet>
             <PaesTitle>Pães</PaesTitle>
             <PaesContainer>
-                {PaesItems.map(item => {
+                {paes.map(item => {
                     return (
-                    <PaesItem item={item} key={item.id}/>)
+                    <PaesItem item={item} key={item._id}/>)
                 })}
             </PaesContainer>
             <BolosTitle>Bolos</BolosTitle>
             <BolosContainer>
-                {BolosItems.map(item => {
+                {bolos.map(item => {
                     return <BolosItem item={item} key={item.id}/>
                 })}
             </BolosContainer>
             <CucasTitle>Cucas</CucasTitle>
             <CucasContainer>
-                {CucasItems.map(item => {
+                {cucas.map(item => {
                     return <CucasItem item={item} key={item.id}/>
                 })}
             </CucasContainer>

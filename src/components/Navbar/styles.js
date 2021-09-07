@@ -50,6 +50,7 @@ export const MenuNavbar = styled.div`
     height: 4.5rem;
     width: 100%;
     overflow: hidden;
+    
 
     .test-relative {
         /* position: fixed;
@@ -93,6 +94,8 @@ export const MenuContainer = styled.ul`
     padding: 1rem;
     cursor: pointer;
     overflow: hidden;
+
+   
     
     li{
         @media(max-width: 632px){

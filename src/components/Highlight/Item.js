@@ -10,7 +10,7 @@ const Item = ({ item }) => {
             <ContainerDescription>
                 <ItemDescription>
                     <div className='text-description'>
-                        {item.description}
+                    
                     </div>
                     
                 </ItemDescription>
@@ -18,7 +18,7 @@ const Item = ({ item }) => {
             
         
             <Paper className='paper'>
-                <img className='image-carousel' src={item.image} />
+                <img className='image-carousel' src={item.url} />
             </Paper>
         </ItemContainer>
         

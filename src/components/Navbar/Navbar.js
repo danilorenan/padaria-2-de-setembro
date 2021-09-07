@@ -55,11 +55,12 @@ const Navbar = () => {
                                 Onde nos encontrar
                             </li>
                         </Link>
-                        <div className='menu-icons'>
+                        {/* <div className='menu-icons'>
                             <a style={{textDecoration:'none', color: '#fff'}} href='https://www.facebook.com/pages/Padaria%202%20de%20Setembro/489603607878674/'>
                                 <FaceIcon></FaceIcon> 
                             </a>
-                        </div>
+                        </div> */}
+                        
                                       
                 </MenuContainer>
                 

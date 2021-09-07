@@ -8,22 +8,22 @@ import { PaesCard,
         PaesMoreButton,
         PaesCodCard} from './styles';
 
-const PaesItem = ({ item }) => {
+const PaesItem = ({ item, key }) => {
     const ImageDownload = item.image; 
 
     return (
         <PaesItemContainer>
             <PaesCard className='paes-card'>
-                <PaesImageCard src={item.image} />
+                <PaesImageCard src={item.url} />
                 <PaesInfosContainer>
-                    <PaesNameCard>{item.name}</PaesNameCard>
-                    {item.ing? (
-                    <PaesAboutCard><h3>Ingredientes:</h3>{item.ing} </PaesAboutCard>  
+                    <PaesNameCard>{item.title}</PaesNameCard>
+                    {item.description? (
+                    <PaesAboutCard><h3>Ingredientes:</h3>{item.description} </PaesAboutCard>  
 
                     ):(<PaesAboutCard>Não informado</PaesAboutCard>)
                         }
                     <PaesCodCard className='paes-cod'>Cód: {item.cod}</PaesCodCard>
-                        <a style={{textDecoration: 'none'}} href={ImageDownload} download={`../../assets/ProductsImages/Paes/${item.link}`}>
+                        <a style={{textDecoration: 'none'}} href={item.url} download>
                             <PaesMoreButton className='paes-button'>Download</PaesMoreButton>
                         </a>
                 </PaesInfosContainer>

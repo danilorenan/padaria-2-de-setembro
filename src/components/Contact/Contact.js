@@ -12,6 +12,8 @@ import { ContainerContact,
         TextPhone, 
         TitleContact } from './styles';
 import emailjs from 'emailjs-com';
+import { makeStyles } from '@material-ui/core/styles';
+
 
 const Contact = () => {
 
@@ -36,6 +38,20 @@ const Contact = () => {
       });
     }
 
+    const useStyle = makeStyles(theme => ({
+        root: {
+            '& .MuiFormLabel-root': {
+                color: '#fff'
+            },
+            '& .MuiInputBase-input': {
+                color: '#fff'
+            }
+        }
+        
+    }))
+    const classes = useStyle();
+
+
     return (
         <ContainerContact>
             <TitleContact>Deixem-nos saber as suas sugestões</TitleContact>
@@ -49,7 +65,7 @@ const Contact = () => {
                         <span>CEP 89052-030 | Blumenau - SC</span>
                     </ContainerInformations> 
                 </ContainerPhoneContact>
-                <ContainerEmailContact onSubmit={sendEmail}>
+                <ContainerEmailContact className={classes.root} onSubmit={sendEmail}>
                     <NameTextField
                         name="name" 
                         required id="standard-basic" 

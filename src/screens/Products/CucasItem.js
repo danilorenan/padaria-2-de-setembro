@@ -11,22 +11,21 @@ import { Link } from 'react-router-dom';
 
 
 const CucasItem = ({ item }) => {
-    const ImageDownload = item.image; 
 
     return (
         
             <CucasItemContainer>
             <CucasCard className='Cucas-card'>
-                <CucasImageCard src={item.image} />
+                <CucasImageCard src={item.url} />
                 <CucasInfosContainer>
-                    <CucasNameCard>{item.name}</CucasNameCard>
-                    {item.ing? (
-                        <CucasAboutCard><h3>Ingredientes:</h3> {item.ing} </CucasAboutCard>
+                    <CucasNameCard>{item.title}</CucasNameCard>
+                    {item.description? (
+                        <CucasAboutCard><h3>Ingredientes:</h3> {item.description} </CucasAboutCard>
                     ):(
                     <CucasAboutCard>Não informado</CucasAboutCard>
                     )}
                     <CucasCodCard className='cucas-cod'>Cód: {item.cod}</CucasCodCard>
-                    <a style={{textDecoration: 'none'}} href={ImageDownload} download={`../../assets/ProductsImages/Cucas/${item.link}`}>
+                    <a style={{textDecoration: 'none'}} href={item.url} download>
                         <CucasMoreButton className='Cucas-button'>Download</CucasMoreButton>
                     </a>
                 </CucasInfosContainer>
