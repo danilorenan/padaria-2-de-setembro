@@ -8,11 +8,25 @@ export const ContactScreenContainer = styled.div`
         }
 
     .space {
-        height: 10rem;
+        height: 40rem;
         background-color: #564929;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .localization-container {
+            margin: 2rem;
+        }
+
+        img {
+            object-fit: cover;
+            background-size: 50% 50%;
+            background: center;
+            width: 100%;
+            height: 35rem;
+        }
 
         @media(max-width: 468px){
-            height: 5rem;
         }
     }
 `
