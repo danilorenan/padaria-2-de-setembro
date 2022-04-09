@@ -21,7 +21,7 @@ const LocalizationScreen = () => {
                 <div className='map-background'>
                     <Map src={MapSC}/>
                     <div className='cities-text'>
-                        <CitiesText><strong>Cidades abrangentes:</strong> Blumenau, Indaial, Gaspar, Brusque, Timbó, Rio dos Cedros, Presidente Getúlio, Vitor Meireles, Botuverá, Itapema, Tijucas, Balneário Camboriú, Itajaí, Navegantes, Piçarras, Barra Velha, Massaranduba, Guaramirim, Jaraguá do Sul, Corupá, Schroeder, Pomerode, Guabiruba, São Francisco do Sul, Araquari e Rodeio. </CitiesText>
+                        <CitiesText><strong>Cidades abrangentes:</strong> Blumenau, Rio do Sul, Indaial, Gaspar, Brusque, Timbó, Rio dos Cedros, Presidente Getúlio, Vitor Meireles, Botuverá, Itapema, Tijucas, Balneário Camboriú, Itajaí, Navegantes, Piçarras, Barra Velha, Massaranduba, Guaramirim, Jaraguá do Sul, Corupá, Schroeder, Pomerode, Guabiruba, São Francisco do Sul, Araquari e Rodeio. </CitiesText>
                     </div>
                 </div>
             </MapContainer>

@@ -51,5 +51,5 @@ export const Map = styled.img`
     }
 `
 export const CitiesText = styled.span`
-
+    color: #fff;
 `
